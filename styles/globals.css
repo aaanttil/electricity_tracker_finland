@@ -1,0 +1,88 @@
+.page-container {
+  display: flex;              
+  justify-content: center;    
+  align-items: center;        
+  min-height: 100vh;         
+  padding: 20px;          
+}
+
+.chart-container {
+  width: 100%;
+  position: relative;
+  max-width: 90vw;          
+  margin: 0 auto;
+  margin-bottom: 1em;
+  padding: 20px 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+
+.stats-container {
+  width: 100%; /* Matches .chart-container */
+  max-width: 90vw; /* Ensures it adapts to screen size */
+  padding: 0 1em; /* Padding like .chart-container */
+  margin: 1em auto;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Matches .chart-container */
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-wrapper {
+  display: flex;
+  flex-direction: row; /* Default to column layout */
+  gap: 8px; /* Space between boxes */
+}
+
+
+.stats-box {
+  flex: 1 1 auto;
+  text-align: center;
+  padding: 0.5em;
+  background-color: #f9f9f9; 
+}
+
+.responsive-padding {
+  padding: 0;
+}
+
+/* Padding for larger screens */
+@media (min-width: 768px) {
+  .responsive-padding {
+    padding: 16px; /* Equivalent to Tailwind's p-4 */
+  }
+}
+
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.hidden-on-mobile {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hidden-on-mobile {
+    display: block;
+  }
+}
+
+/* Add media query for mobile devices */
+@media (max-width: 768px) {
+  .chart-container {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+
+.dropdown-menu-start {
+  right: 0 !important; /* Ensures the dropdown appears on the left side */
+  left: auto !important; /* Prevents the default right-side positioning */
+}
+

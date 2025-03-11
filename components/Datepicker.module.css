@@ -1,0 +1,33 @@
+.datepickerWrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px 0;
+  }
+  
+  .datepickerInput {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 12px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .datepickerInput:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .icon {
+    margin-right: 8px;
+    color: #0070f3; /* Add some color to the calendar icon */
+  }
+
+.datepickerContainer {
+  display: flex; /* Aligns icon and text */
+  align-items: center; /* Vertically center icon and text */
+}

@@ -1,0 +1,55 @@
+.navigationContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+  
+  .navigationButton {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    background-color: #f9f9f9;
+    border: 1px solid #d1d5db;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  @media (max-width: 768px) {
+    .navigationContainer {
+      justify-content: center; /* Center the buttons horizontally */
+      flex-wrap: wrap; /* Allow wrapping if there are too many buttons */
+      gap: 1rem; /* Increase the gap between buttons for better spacing */
+    }
+  
+    .navigationButton {
+      padding: 0.8rem 1.2rem; /* Adjust padding for better fit on smaller screens */
+      font-size: 0.75rem; /* Reduce font size for better scaling */
+    }
+  }
+  
+  .navigationButton:hover {
+    background-color: #f9fafb;
+  }
+  
+  .icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .navigationButton:first-child .icon {
+    margin-right: 0rem;
+  }
+  
+  .navigationButton:last-child .icon {
+    margin-left: 0rem;
+  }
+  
+  /* This ensures your DatePicker container maintains its styles */
+  .navigationContainer > :global(.datepickerContainer) {
+    flex: 0 1 auto;
+  }
